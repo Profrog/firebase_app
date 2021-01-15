@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void click03(View v){
-        Intent intent1 = new Intent(getApplicationContext(), conveyJava.class);
+        Intent intent1 = new Intent(getApplicationContext(), goalcheck.class);
         startActivity(intent1);
     }
 
