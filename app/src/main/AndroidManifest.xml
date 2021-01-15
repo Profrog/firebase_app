@@ -23,7 +23,7 @@
         <activity android:name=".purchasingJava"></activity>
         <activity android:name=".QRcodeJava"
             android:hardwareAccelerated="true"></activity>
-        <activity android:name= ".chat"></activity>
+        <activity android:name=".goalcheck"></activity>
 
     </application>
 </manifest>
