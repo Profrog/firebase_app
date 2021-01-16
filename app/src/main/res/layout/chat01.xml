@@ -27,25 +27,44 @@
 
 
         <EditText
-            android:id="@+id/enroll_date"
-            android:layout_width="wrap_content"
+            android:id="@+id/enroll_data"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
             android:inputType="textPersonName"
             android:textSize="15dp"
-            android:text="결제금액" />
+            android:text="채팅내용" />
 
 
 
         <Button
             android:id="@+id/okbutton1"
-            android:layout_below= "@id/enroll_date"
+            android:layout_below= "@id/enroll_data"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="채팅"
+            android:text="채팅 올리기"
             android:onClick="clicksaving1"
             />
+
+        <Button
+            android:id="@+id/entrance_chat"
+            android:layout_below= "@id/okbutton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="채팅방 업데이트"
+            android:onClick="clickupdate1"
+            />
+
+
+        <TextView
+            android:id = "@+id/chat_contents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below = "@id/entrance_chat"
+            android:text = "채팅방 내용"
+        />
+
 
 
     </RelativeLayout>

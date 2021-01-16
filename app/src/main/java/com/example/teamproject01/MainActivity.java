@@ -15,8 +15,10 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity {
 
-    private String username;
-    private String usercode;
+    private String username ="";
+    private String usercode = "";
+    private String classcode = "";
+
     private String enroll_date;
     private String returnString;
 
@@ -34,12 +36,19 @@ public class MainActivity extends AppCompatActivity {
     {
         username = data;
     }
+    public String returnUsername() {return username;}
 
-    public void changingUsercode(String data)
-    {
-        usercode = data;
+    public void changingUsercode(String data) { usercode = data; }
+    public String returnUsercode() {return usercode;}
 
-    }
+    public void changingClasscode(String data) { classcode = data; }
+    public String returnClasscode() {return classcode;}
+
+
+
+
+
+
 
     public void changingDateenroll(String data)
     {
