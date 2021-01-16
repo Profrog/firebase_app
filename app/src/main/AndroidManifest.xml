@@ -18,7 +18,6 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".conveyJava"></activity>
         <activity android:name=".identifyJava"></activity>
         <activity android:name=".purchasingJava"></activity>
         <activity android:name=".QRcodeJava"

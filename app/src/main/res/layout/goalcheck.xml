@@ -11,7 +11,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="아방가르드 앱"
+        android:text="프로필"
         android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -22,78 +22,73 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp">
-        <Button
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp">
 
-            android:id = "@+id/image1"
-            android:layout_width="match_parent"
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="15dp"
-            android:text="신원등록"
-            android:onClick="click01"
-            />
+            tools:srcCompat="@tools:sample/avatars" />
 
-        <Button
-            android:layout_marginTop="50dp"
-            android:id = "@+id/image2"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/image1"
-            android:textSize="15dp"
-            android:text="결제"
-            android:onClick="click02"
-            />
+            android:layout_marginLeft="200dp"
+            android:text="이름" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="10dp"
+            android:text="학번" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView1"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="10dp"
+            android:text="학수번호" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView"
+            android:layout_marginTop="100dp"
+            android:text="목표목표목표목표목표목표" />
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView"
+            android:layout_alignTop="@id/textView3"
+            android:layout_alignBottom="@id/textView3"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/textView3" />
 
         <Button
-            android:layout_marginTop="50dp"
             android:id="@+id/image3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/image2"
-            android:text="전송"
+            android:layout_marginTop="600dp"
             android:onClick="click03"
+            android:text="돌아가기"
             android:textSize="15dp" />
-
-
-        <Button
-            android:layout_marginTop="50dp"
-            android:id = "@+id/image4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/image3"
-            android:textSize="15dp"
-            android:onClick="click04"
-            android:text="QR 코드표시"
-            />
-
-        <Button
-            android:layout_marginTop="50dp"
-            android:id = "@+id/image5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/image4"
-            android:textSize="15dp"
-            android:onClick="click05"
-            android:text="새로고침"
-            />
-
-
-
-        <TextView
-            android:id = "@+id/showing"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="string값 표시"
-            android:textSize="20dp"
-            android:layout_below="@id/image5"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.022"
-            />
-
     </RelativeLayout>
+
+
+
+
 </RelativeLayout>
 
