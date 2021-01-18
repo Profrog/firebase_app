@@ -11,6 +11,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -24,16 +26,24 @@ import java.util.Map;
 
 public class identifyJava extends AppCompatActivity {
 
+    private EditText classcode1;
+    private TextView usercode1;
+    private TextView username1;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.identifyjava);
+
+        username1 = (TextView) findViewById(R.id.username);
+        usercode1 = (TextView) findViewById(R.id.usercode);
+        classcode1 = (EditText) findViewById(R.id.classcode);
+
+        username1.setText(((MainActivity)MainActivity.forstatic).returnUsername());
+        usercode1.setText(((MainActivity)MainActivity.forstatic).returnUsercode());
     }
 
     public void clicksaving(View v){
 
-        final EditText username1 = (EditText) findViewById(R.id.username);
-        final EditText usercode1 = (EditText) findViewById(R.id.usercode);
-        final EditText classcode1 = (EditText) findViewById(R.id.classcode);
         final TextView login_content = (TextView)findViewById(R.id.login_contents);
 
         FirebaseDatabase DB1 = FirebaseDatabase.getInstance();
@@ -53,9 +63,6 @@ public class identifyJava extends AppCompatActivity {
 
     public void clickcancel(View v) {
 
-        final EditText username1 = (EditText) findViewById(R.id.username);
-        final EditText usercode1 = (EditText) findViewById(R.id.usercode);
-        final EditText classcode1 = (EditText) findViewById(R.id.classcode);
         final TextView login_content = (TextView)findViewById(R.id.login_contents);
 
         username1.setText("이름");
@@ -79,9 +86,6 @@ public class identifyJava extends AppCompatActivity {
 
 
     public void clickAlarm(View v) {
-        final EditText username1 = (EditText) findViewById(R.id.username);
-        final EditText usercode1 = (EditText) findViewById(R.id.usercode);
-        final EditText classcode1 = (EditText) findViewById(R.id.classcode);
 
         ((MainActivity)MainActivity.forstatic).changingUsername(username1.getText().toString());
         ((MainActivity)MainActivity.forstatic).changingUsercode(usercode1.getText().toString());
@@ -102,9 +106,6 @@ public class identifyJava extends AppCompatActivity {
     }
 
     public void clickchat(View v) {
-        final EditText username1 = (EditText) findViewById(R.id.username);
-        final EditText usercode1 = (EditText) findViewById(R.id.usercode);
-        final EditText classcode1 = (EditText) findViewById(R.id.classcode);
 
         ((MainActivity)MainActivity.forstatic).changingUsername(username1.getText().toString());
         ((MainActivity)MainActivity.forstatic).changingUsercode(usercode1.getText().toString());
