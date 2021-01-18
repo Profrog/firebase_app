@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private String username ="";
     private String usercode = "";
     private String classcode = "";
+    private String chatstate = "";
 
     private String enroll_date;
     private String returnString;
@@ -44,9 +45,8 @@ public class MainActivity extends AppCompatActivity {
     public void changingClasscode(String data) { classcode = data; }
     public String returnClasscode() {return classcode;}
 
-
-
-
+    public void changingchatState(String data) { chatstate = data; }
+    public String returnchatState() {return chatstate;}
 
 
 
@@ -75,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
     public void click03(View v){
         Intent intent1 = new Intent(getApplicationContext(), goalcheck.class);
         startActivity(intent1);
+        // 연결된 함수
     }
 
     public void click04(View v){
@@ -82,9 +83,14 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent1);
     }
 
-
     public void click05(View v){
         TextView showing1 = (TextView) findViewById(R.id.showing);
         showing1.setText(getReturnString());
     }
+
+    public void click06(View v){
+        Intent intent1 = new Intent(getApplicationContext(), goalcheck.class);
+        startActivity(intent1);
+    }
+
 }

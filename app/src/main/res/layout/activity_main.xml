@@ -30,7 +30,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="15dp"
-        android:text="스터디 참석하기"
+        android:text="스터디 방 만들기"
         android:onClick="click01"
      />
 
@@ -51,7 +51,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/image2"
-            android:text="Kim"
+            android:text="goalcheck"
             android:onClick="click03"
             android:textSize="15dp" />
 
@@ -63,9 +63,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/image3"
         android:textSize="15dp"
-        android:onClick="click04"
-        android:text="Gong"
+        android:onClick="click06"
+        android:text="타임스톱"
         />
+
 
         <Button
             android:layout_marginTop="50dp"
@@ -92,6 +93,8 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.022"
             />
+
+
 
 
     </RelativeLayout>

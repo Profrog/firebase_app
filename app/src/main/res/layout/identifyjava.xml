@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="같은 수업 스터디 들어가기"
+        android:text="같은 수업 스터디 방 들어가기"
         android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -28,7 +28,7 @@
 
         <EditText
             android:id="@+id/username"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
@@ -40,7 +40,7 @@
         <EditText
             android:id="@+id/usercode"
             android:layout_below= "@id/username"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
@@ -51,7 +51,7 @@
         <EditText
             android:id="@+id/classcode"
             android:layout_below= "@id/usercode"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
@@ -72,40 +72,44 @@
             android:layout_below= "@id/okbutton1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="19dp"
+            android:layout_marginTop="20dp"
             android:onClick="clickcancel"
             android:text="제거" />
 
 
-        <EditText
-            android:id="@+id/updatefield"
-            android:layout_below= "@id/cancelbutton1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:textSize="15dp"
-            android:text="공지를 여기에 입력하시오" />
+
 
 
         <Button
             android:id="@+id/updateAlarm"
-            android:layout_below= "@id/updatefield"
+            android:layout_below= "@id/cancelbutton1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="19dp"
-            android:onClick="clickupdate"
-            android:text="수업공지 추가" />
+            android:layout_marginTop="20dp"
+            android:onClick="clickAlarm"
+            android:text="공지 이동" />
 
         <Button
             android:id="@+id/gochatfield"
             android:layout_below= "@id/updateAlarm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="19dp"
+            android:layout_marginTop="20dp"
             android:onClick="clickchat"
             android:text="채팅방 이동" />
+
+
+        <TextView
+            android:id = "@+id/login_contents"
+            android:textSize="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_below= "@+id/gochatfield"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text = ""
+            />
+
+
 
 
     </RelativeLayout>

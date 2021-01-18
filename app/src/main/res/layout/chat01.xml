@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android= "http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android= "http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,64 +9,50 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:id = "@+id/title"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:text="채팅 창"
         android:textSize="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.022"
+
         />
 
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="6"
+            android:scrollbars="vertical"
+            android:fillViewport="true">
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp">
+    <TextView
+        android:id = "@+id/chat_contents"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:text = ""
+        />
 
+        </ScrollView>
 
-        <EditText
-            android:id="@+id/enroll_data"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:textSize="15dp"
-            android:text="채팅내용" />
+    <EditText
+        android:id="@+id/enroll_data"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:inputType="textPersonName"
+        android:textSize="15dp"
+        android:text="채팅 칠 내용"
 
+        />
 
 
         <Button
             android:id="@+id/okbutton1"
-            android:layout_below= "@id/enroll_data"
+            android:layout_below= "@+id/enroll_data"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
             android:text="채팅 올리기"
             android:onClick="clicksaving1"
             />
 
-        <Button
-            android:id="@+id/entrance_chat"
-            android:layout_below= "@id/okbutton1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="채팅방 업데이트"
-            android:onClick="clickupdate1"
-            />
-
-
-        <TextView
-            android:id = "@+id/chat_contents"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below = "@id/entrance_chat"
-            android:text = "채팅방 내용"
-        />
-
-
-
-    </RelativeLayout>
-
-</RelativeLayout>
+</LinearLayout>
