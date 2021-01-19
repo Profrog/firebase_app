@@ -1,11 +1,11 @@
 package com.example.teamproject01;
 
-<<<<<<< HEAD
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.TestLooperManager;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -18,11 +18,25 @@ public class goalcheck extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.goalcheck);
+        setContentView(R.layout.goalcheck1);
+
+        final TextView username=(TextView)findViewById(R.id.name);
+        String username1 = ((MainActivity) MainActivity.forstatic).returnUsername();
+        username.setText(username1);
+
+        final TextView usercode=(TextView)findViewById(R.id.code);
+        String usercode1 = ((MainActivity) MainActivity.forstatic).returnUsercode();
+        usercode.setText(usercode1);
+
+        final TextView userclass=(TextView)findViewById(R.id.classcode);
+        String class1 = ((MainActivity) MainActivity.forstatic).returnClasscode();
+        userclass.setText(class1);
+
+
     }
+}
 
-
-=======
+/*
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
@@ -54,5 +68,5 @@ public class goalcheck extends AppCompatActivity {
 
         profile1.setText(username1);
     }
->>>>>>> origin/master
 }
+*/

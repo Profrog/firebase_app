@@ -16,21 +16,24 @@
         android:textSize="30dp"
         />
 
-        <ScrollView
-            android:layout_width="fill_parent"
-            android:layout_height="0dp"
-            android:layout_weight="6"
-            android:scrollbars="vertical"
-            android:fillViewport="true">
-
-    <TextView
-        android:id = "@+id/chat_contents"
+    <ScrollView
+        android:id = "@+id/chat_scroll"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:text = ""
-        />
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:scrollbars="vertical"
+        android:fillViewport="true">
 
-        </ScrollView>
+
+        <TextView
+            android:id = "@+id/chat_contents"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text = ""
+
+            />
+
+    </ScrollView>
 
     <EditText
         android:id="@+id/enroll_data"
@@ -44,14 +47,14 @@
         />
 
 
-        <Button
-            android:id="@+id/okbutton1"
-            android:layout_below= "@+id/enroll_data"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_weight="1.5"
-            android:text="채팅 올리기"
-            android:onClick="clicksaving1"
-            />
+    <Button
+        android:id="@+id/okbutton1"
+        android:layout_below= "@+id/enroll_data"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:text="채팅 올리기"
+        android:onClick="clicksaving1"
+        />
 
 </LinearLayout>

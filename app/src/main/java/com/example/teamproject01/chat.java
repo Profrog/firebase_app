@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.google.firebase.analytics.FirebaseAnalytics;
@@ -78,6 +79,7 @@ public class chat extends AppCompatActivity{
         String classcode1 = ((MainActivity) MainActivity.forstatic).returnClasscode();
         String chatstate1 = ((MainActivity) MainActivity.forstatic).returnchatState();
         final EditText chatdata1 = (EditText) findViewById(R.id.enroll_data);
+        final ScrollView scroll = (ScrollView)findViewById(R.id.chat_scroll);
 
         FirebaseDatabase DB1 = FirebaseDatabase.getInstance();
         Date currentTime = Calendar.getInstance().getTime();
@@ -85,13 +87,14 @@ public class chat extends AppCompatActivity{
         DatabaseReference myRef = DB1.getReference("check").child(classcode1).child(chatstate1).child(currentTime.toString());
         myRef.setValue( username1  + ":"  +  chatdata1.getText().toString() + '\n');
 
+        scroll.post(new Runnable() {
+            @Override
+            public void run() {scroll.fullScroll(ScrollView.FOCUS_DOWN);
+
+            }
+        });
+
+
     }
-
-    public void clickupdate1(View v){
-
-    }
-
-
-
 
 }

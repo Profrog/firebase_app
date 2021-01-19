@@ -10,22 +10,24 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:launchMode = "singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            android:launchMode="singleTask"
+
+
         </activity>
 
         <activity android:name=".firstWindow">
-            android:theme="@style/FullScreenTheme" />
+
         </activity>
-        <activity android:name=".Login">
-            android:launchMode="singleTask"
+        <activity android:name=".Login"
+            android:launchMode="singleTask">
+
         </activity>
         <activity android:name=".signup"></activity>
-        <activity android:name=".conveyJava"></activity>
         <activity android:name=".identifyJava"></activity>
         <activity android:name=".purchasingJava"></activity>
         <activity android:name=".QRcodeJava"
