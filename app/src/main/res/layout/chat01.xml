@@ -17,18 +17,21 @@
         />
 
         <ScrollView
+            android:id = "@+id/chat_scroll"
             android:layout_width="fill_parent"
             android:layout_height="0dp"
             android:layout_weight="6"
             android:scrollbars="vertical"
             android:fillViewport="true">
 
-    <TextView
-        android:id = "@+id/chat_contents"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:text = ""
-        />
+
+            <TextView
+                android:id = "@+id/chat_contents"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text = ""
+
+                />
 
         </ScrollView>
 
