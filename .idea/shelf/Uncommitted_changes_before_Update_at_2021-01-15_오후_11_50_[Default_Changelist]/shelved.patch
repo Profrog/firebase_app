@@ -1,0 +1,245 @@
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    package=\"com.example.teamproject01\">\r\n\r\n    <application\r\n        android:allowBackup=\"true\"\r\n        android:icon=\"@mipmap/ic_launcher\"\r\n        android:label=\"@string/app_name\"\r\n        android:roundIcon=\"@mipmap/ic_launcher_round\"\r\n        android:supportsRtl=\"true\"\r\n        android:theme=\"@style/AppTheme\">\r\n\r\n        <activity android:name=\".MainActivity\">\r\n            <intent-filter>\r\n                <action android:name=\"android.intent.action.MAIN\" />\r\n\r\n                <category android:name=\"android.intent.category.LAUNCHER\" />\r\n            </intent-filter>\r\n        </activity>\r\n\r\n        <activity android:name=\".conveyJava\"></activity>\r\n        <activity android:name=\".identifyJava\"></activity>\r\n        <activity android:name=\".purchasingJava\"></activity>\r\n        <activity android:name=\".QRcodeJava\"\r\n            android:hardwareAccelerated=\"true\"></activity>\r\n\r\n    </application>\r\n</manifest>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/AndroidManifest.xml	(revision 380392cfe16a0f632aba8cd8cd84eb02b37ebb99)
++++ app/src/main/AndroidManifest.xml	(date 1610721434959)
+@@ -9,7 +9,6 @@
+         android:roundIcon="@mipmap/ic_launcher_round"
+         android:supportsRtl="true"
+         android:theme="@style/AppTheme">
+-
+         <activity android:name=".MainActivity">
+             <intent-filter>
+                 <action android:name="android.intent.action.MAIN" />
+@@ -17,12 +16,14 @@
+                 <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>
+         </activity>
++        <activity android:name=".conveyJava" />
++        <activity android:name=".purchasingJava" />
++        <activity android:name=".identifyJava" />
+ 
+-        <activity android:name=".conveyJava"></activity>
+-        <activity android:name=".identifyJava"></activity>
+-        <activity android:name=".purchasingJava"></activity>
+-        <activity android:name=".QRcodeJava"
+-            android:hardwareAccelerated="true"></activity>
+-
++        <activity
++            android:name=".QRcodeJava"
++            android:hardwareAccelerated="true" />
++        <activity android:name=".goalcheck" />
+     </application>
++
+ </manifest>
+\ No newline at end of file
+Index: app/src/main/java/com/example/teamproject01/goalcheck.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/teamproject01/goalcheck.java	(date 1610721434814)
++++ app/src/main/java/com/example/teamproject01/goalcheck.java	(date 1610721434814)
+@@ -0,0 +1,34 @@
++package com.example.teamproject01;
++
++import androidx.appcompat.app.AppCompatActivity;
++
++import android.content.Context;
++import android.content.Intent;
++import android.os.Bundle;
++import android.view.View;
++import android.widget.EditText;
++import android.widget.TextView;
++
++import com.google.firebase.analytics.FirebaseAnalytics;
++import com.google.firebase.database.DatabaseReference;
++import com.google.firebase.database.FirebaseDatabase;
++
++public class goalcheck extends AppCompatActivity {
++
++    private String username;
++    private String usercode;
++    private String enroll_date;
++    private String returnString;
++
++    public static Context forstatic;
++
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.goalcheck);
++        forstatic = this;
++    }
++
++
++}
+Index: .idea/gradle.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"GradleMigrationSettings\" migrationVersion=\"1\" />\r\n  <component name=\"GradleSettings\">\r\n    <option name=\"linkedExternalProjectsSettings\">\r\n      <GradleProjectSettings>\r\n        <option name=\"testRunner\" value=\"PLATFORM\" />\r\n        <option name=\"distributionType\" value=\"DEFAULT_WRAPPED\" />\r\n        <option name=\"externalProjectPath\" value=\"$PROJECT_DIR$\" />\r\n        <option name=\"gradleJvm\" value=\"JDK\" />\r\n        <option name=\"modules\">\r\n          <set>\r\n            <option value=\"$PROJECT_DIR$\" />\r\n            <option value=\"$PROJECT_DIR$/app\" />\r\n          </set>\r\n        </option>\r\n        <option name=\"resolveModulePerSourceSet\" value=\"false\" />\r\n      </GradleProjectSettings>\r\n    </option>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/gradle.xml	(revision 380392cfe16a0f632aba8cd8cd84eb02b37ebb99)
++++ .idea/gradle.xml	(date 1610652569433)
+@@ -7,7 +7,6 @@
+         <option name="testRunner" value="PLATFORM" />
+         <option name="distributionType" value="DEFAULT_WRAPPED" />
+         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+-        <option name="gradleJvm" value="JDK" />
+         <option name="modules">
+           <set>
+             <option value="$PROJECT_DIR$" />
+@@ -15,6 +14,7 @@
+           </set>
+         </option>
+         <option name="resolveModulePerSourceSet" value="false" />
++        <option name="useQualifiedModuleNames" value="true" />
+       </GradleProjectSettings>
+     </option>
+   </component>
+Index: app/src/main/res/layout/goalcheck.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/goalcheck.xml	(date 1610720130978)
++++ app/src/main/res/layout/goalcheck.xml	(date 1610720130978)
+@@ -0,0 +1,99 @@
++<?xml version="1.0" encoding="utf-8"?>
++
++<RelativeLayout xmlns:android= "http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    android:orientation="vertical"
++    tools:context=".MainActivity">
++
++    <TextView
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:text="아방가르드 앱"
++        android:textSize="30dp"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintLeft_toLeftOf="parent"
++        app:layout_constraintRight_toRightOf="parent"
++        app:layout_constraintTop_toTopOf="parent"
++        app:layout_constraintVertical_bias="0.022"
++        />
++
++    <RelativeLayout
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:layout_marginTop="50dp">
++        <Button
++
++            android:id = "@+id/image1"
++            android:layout_width="match_parent"
++            android:layout_height="wrap_content"
++            android:textSize="15dp"
++            android:text="신원등록"
++            android:onClick="click01"
++            />
++
++        <Button
++            android:layout_marginTop="50dp"
++            android:id = "@+id/image2"
++            android:layout_width="match_parent"
++            android:layout_height="wrap_content"
++            android:layout_below="@id/image1"
++            android:textSize="15dp"
++            android:text="결제"
++            android:onClick="click02"
++            />
++
++        <Button
++            android:layout_marginTop="50dp"
++            android:id="@+id/image3"
++            android:layout_width="match_parent"
++            android:layout_height="wrap_content"
++            android:layout_below="@id/image2"
++            android:text="전송"
++            android:onClick="click03"
++            android:textSize="15dp" />
++
++
++        <Button
++            android:layout_marginTop="50dp"
++            android:id = "@+id/image4"
++            android:layout_width="match_parent"
++            android:layout_height="wrap_content"
++            android:layout_below="@id/image3"
++            android:textSize="15dp"
++            android:onClick="click04"
++            android:text="QR 코드표시"
++            />
++
++        <Button
++            android:layout_marginTop="50dp"
++            android:id = "@+id/image5"
++            android:layout_width="match_parent"
++            android:layout_height="wrap_content"
++            android:layout_below="@id/image4"
++            android:textSize="15dp"
++            android:onClick="click05"
++            android:text="새로고침"
++            />
++
++
++
++        <TextView
++            android:id = "@+id/showing"
++            android:layout_width="match_parent"
++            android:layout_height="wrap_content"
++            android:text="string값 표시"
++            android:textSize="20dp"
++            android:layout_below="@id/image5"
++            app:layout_constraintBottom_toBottomOf="parent"
++            app:layout_constraintLeft_toLeftOf="parent"
++            app:layout_constraintRight_toRightOf="parent"
++            app:layout_constraintTop_toTopOf="parent"
++            app:layout_constraintVertical_bias="0.022"
++            />
++
++    </RelativeLayout>
++</RelativeLayout>
++
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_1_7\" default=\"true\" project-jdk-name=\"JDK\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/build/classes\" />\r\n  </component>\r\n  <component name=\"ProjectType\">\r\n    <option name=\"id\" value=\"Android\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/misc.xml	(revision 380392cfe16a0f632aba8cd8cd84eb02b37ebb99)
++++ .idea/misc.xml	(date 1610720613031)
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" default="true" project-jdk-name="JDK" project-jdk-type="JavaSDK">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/build/classes" />
+   </component>
+   <component name="ProjectType">
+Index: .idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/compiler.xml	(date 1610652569319)
++++ .idea/compiler.xml	(date 1610652569319)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="CompilerConfiguration">
++    <bytecodeTargetLevel target="1.8" />
++  </component>
++</project>
+\ No newline at end of file
