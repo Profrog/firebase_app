@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/mode_focus"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:text="집중 모드"
+        android:textColor="#9C27B0"
+        android:gravity="center"
+        android:textSize="75dp"
+        android:fontFamily="@font/nanumsquareround"
+        />
+
+    <ImageView
+        android:id="@+id/study_img"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/studying"
+        android:layout_gravity="center"
+        />
+
+
+    <EditText
+        android:id="@+id/warning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="설정한 시간동안 다른 어플을 사용하실 수 없습니다."
+        android:fontFamily="@font/nanumsquareround"
+        />
+
+
+    <EditText
+        android:id="@+id/setting_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nanumsquareround"
+        android:text="집중 시간 선택" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv"
+        />
+
+
+
+    <TimePicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tp"
+        android:layout_gravity="center_horizontal"
+        android:timePickerMode="spinner"
+        />
+
+
+
+
+    <Button
+        android:id="@+id/btn_move"
+        android:layout_width="220dp"
+        android:layout_height="74dp"
+        android:layout_gravity="center"
+        android:fontFamily="@font/nanumsquareround"
+        android:text="집중하러가기!"
+        android:textSize="26dp" />
+
+</LinearLayout>

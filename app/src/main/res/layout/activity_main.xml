@@ -86,7 +86,7 @@
             android:layout_below="@id/image3"
             android:textSize="15dp"
             android:onClick="click06"
-            android:text="타임스톱"
+            android:text="Focus Mode"
             />
 
 

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".focusmode2">
+
+    <EditText
+        android:id="@+id/mode_focus"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:text="집중 모드"
+        android:textColor="#9C27B0"
+        android:gravity="center"
+        android:textSize="75dp"
+        android:fontFamily="@font/nanumsquareround"
+        />
+
+    <ImageView
+        android:id="@+id/fire_img"
+        android:layout_width="111dp"
+        android:layout_height="119dp"
+        android:layout_gravity="center"
+        android:src="@drawable/enthusiast" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="집중 모드 실행 중입니다!"
+        android:layout_gravity="center"
+        android:textSize="35dp"
+        android:fontFamily="@font/nanumsquareround"
+        />
+</LinearLayout>

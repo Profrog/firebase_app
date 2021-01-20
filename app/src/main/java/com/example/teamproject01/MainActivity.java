@@ -164,7 +164,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void click06(View v){
-        Intent intent1 = new Intent(getApplicationContext(), goalcheck.class);
+        Intent intent1 = new Intent(getApplicationContext(), focusmode.class);
         startActivity(intent1);
     }
 

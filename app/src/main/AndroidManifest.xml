@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.teamproject01">
+    <uses-permission android:name="android.permission.REORDER_TASKS"/>
+
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
 
     <application
         android:allowBackup="true"
@@ -35,6 +38,8 @@
         <activity android:name= ".chat"></activity>
         <activity android:name= ".goalcheck"></activity>
         <activity android:name= ".goalList"></activity>
+        <activity android:name=".focusmode"></activity>
+        <activity android:name=".focusmode2"></activity>
 
     </application>
 </manifest>
