@@ -1,6 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout xmlns:android= "http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:id = "@+id/title"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="목표달성 창"
+        android:textSize="30dp"
+        />
+
+    <ScrollView
+        android:id = "@+id/puspose_scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:scrollbars="vertical"
+        android:fillViewport="true">
+
+
+        <TextView
+            android:id = "@+id/purpose_contents"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text = ""
+            />
+
+    </ScrollView>
+
+
+
+    <EditText
+        android:id="@+id/enroll_purpose"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:inputType="textPersonName"
+        android:textSize="15dp"
+        android:text="목표 칠 내용"
+
+        />
+
+
+    <Button
+        android:id="@+id/targetbutton1"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_below="@+id/enroll_purpose"
+        android:layout_weight="0.5"
+        android:onClick="clicksav_purpose1"
+        android:text="목표 올리기" />
+
+
+
+
+
+
+</LinearLayout>

@@ -18,6 +18,7 @@
         android:textColor="#FE5500"
         android:textSize="50dp"
 
+
         tools:layout_editor_absoluteX="109dp"
         tools:layout_editor_absoluteY="35dp"
         tools:visibility="visible" />

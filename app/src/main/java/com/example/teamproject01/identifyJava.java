@@ -120,7 +120,7 @@ public class identifyJava extends AppCompatActivity {
             DatabaseReference myRef = DB1.getReference("check").child(classcode1.getText().toString()).child("chat").child(currentTime.toString());
             myRef.setValue(username1.getText().toString() + " 님이 입장하셨습니다" + "\n");
 
-            Intent intent1 = new Intent(getApplicationContext(), chat.class);
+            Intent intent1 = new Intent(getApplicationContext(), goalList.class);
             startActivity(intent1);
         }
     }
