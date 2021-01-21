@@ -46,12 +46,18 @@ public class signup extends AppCompatActivity {
         buttonJoin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!editTextId.getText().toString().equals("") && !editTextPassword.getText().toString().equals("") && !editTextName.getText().toString().equals("") ) {
+                if (editTextId.getText().toString().equals("") || editTextPassword.getText().toString().equals("") || editTextName.getText().toString().equals("") ) {
                     // 학번과 비밀번호와 이름이 공백이 아닐 경우
-                    createUser(editTextId.getText().toString()+"@inha.ac.kr", editTextPassword.getText().toString(), editTextName.getText().toString());
+                    Toast.makeText(signup.this, "학번 이름 비밀번호를 모두 입력하세요.", Toast.LENGTH_LONG).show();
+                }
+                else if (editTextId.getText().length() != 8) {
+                    Toast.makeText(signup.this, "올바른 학번을 입력하세요", Toast.LENGTH_LONG).show();
+                }
+                else if (editTextPassword.getText().length() < 6) {
+                    Toast.makeText(signup.this, "비밀번호를 6글자 이상으로 설정해주세요.", Toast.LENGTH_LONG).show();
                 }
                 else {
-                    Toast.makeText(signup.this, "학번 이름 비밀번호를 모두 입력하세요.", Toast.LENGTH_LONG).show();
+                    createUser(editTextId.getText().toString()+"@inha.ac.kr", editTextPassword.getText().toString(), editTextName.getText().toString());
                 }
             }
         });

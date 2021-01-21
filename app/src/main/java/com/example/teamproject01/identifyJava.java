@@ -51,10 +51,6 @@ public class identifyJava extends AppCompatActivity {
 
         myRef.setValue(username1.getText().toString());
 
-        ((MainActivity)MainActivity.forstatic).changingUsername(username1.getText().toString());
-        ((MainActivity)MainActivity.forstatic).changingUsercode(usercode1.getText().toString());
-        ((MainActivity)MainActivity.forstatic).changingClasscode(classcode1.getText().toString());
-
         String showdata = "이름 " + username1.getText().toString() + "\n" + "학번 " + usercode1.getText().toString() + "\n" +  "학수번호 " + classcode1.getText().toString();
         login_content.setText(showdata);
 
@@ -87,9 +83,7 @@ public class identifyJava extends AppCompatActivity {
 
     public void clickAlarm(View v) {
 
-        ((MainActivity)MainActivity.forstatic).changingUsername(username1.getText().toString());
-        ((MainActivity)MainActivity.forstatic).changingUsercode(usercode1.getText().toString());
-        ((MainActivity)MainActivity.forstatic).changingClasscode(classcode1.getText().toString());
+
         ((MainActivity)MainActivity.forstatic).changingchatState("alarm");
 
         if(((MainActivity)MainActivity.forstatic).getReturnString() != "") {
@@ -107,9 +101,7 @@ public class identifyJava extends AppCompatActivity {
 
     public void clickchat(View v) {
 
-        ((MainActivity)MainActivity.forstatic).changingUsername(username1.getText().toString());
-        ((MainActivity)MainActivity.forstatic).changingUsercode(usercode1.getText().toString());
-        ((MainActivity)MainActivity.forstatic).changingClasscode(classcode1.getText().toString());
+
         ((MainActivity)MainActivity.forstatic).changingchatState("chat");
 
         if(((MainActivity)MainActivity.forstatic).getReturnString() != "") {
@@ -125,4 +117,8 @@ public class identifyJava extends AppCompatActivity {
         }
     }
 
+
+    public void randommatching(){
+
+    }
 }

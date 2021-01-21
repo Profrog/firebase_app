@@ -19,24 +19,28 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-
         </activity>
 
-        <activity android:name=".firstWindow">
 
-        </activity>
+
         <activity android:name=".Login"
             android:launchMode="singleTask">
-
         </activity>
+
+        <activity android:name=".profilepopup"></activity>
+        <activity android:name=".firstWindow"></activity>
         <activity android:name=".signup"></activity>
         <activity android:name=".identifyJava"></activity>
         <activity android:name=".purchasingJava"></activity>
         <activity android:name=".QRcodeJava"
             android:hardwareAccelerated="true"></activity>
         <activity android:name= ".chat"></activity>
-        <activity android:name= ".goalcheck"></activity>
+        <activity android:name= ".jkgoalcheck0">
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name= ".jkgoalcheck"
+            android:launchMode="singleTask">
+            ></activity>
         <activity android:name= ".goalList"></activity>
         <activity android:name=".focusmode"></activity>
         <activity android:name=".focusmode2"></activity>

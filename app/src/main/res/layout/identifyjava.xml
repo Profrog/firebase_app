@@ -57,7 +57,7 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:textSize="15dp"
-            android:text="학수번호" />
+            android:hint="학수번호" />
 
         <Button
             android:id="@+id/okbutton1"

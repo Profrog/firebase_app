@@ -4,24 +4,19 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private String usercode = "";
     private String classcode = "";
     private String chatstate = "";
+    private int loginflag = 0;
 
     private String enroll_date;
     private String returnString;
@@ -52,10 +48,11 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(this, firstWindow.class);
             startActivity(intent);
         }
-
         username = user.getDisplayName();
         usercode = user.getEmail().substring(0,8);
     }
+
+
 
     @Override
     public void onBackPressed() {
@@ -72,8 +69,24 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        user = FirebaseAuth.getInstance().getCurrentUser();
+        username = user.getDisplayName();
+        usercode = user.getEmail().substring(0,8);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+    }
+
+
     public void changingUsername(String data)
     {
+        user = FirebaseAuth.getInstance().getCurrentUser();
         UserProfileChangeRequest profileUpdates = new UserProfileChangeRequest.Builder()
                 .setDisplayName(data)
                 .build();
@@ -83,34 +96,37 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
-                            Toast.makeText(MainActivity.this, "이름 변경 완료!", Toast.LENGTH_LONG).show();
+                            Toast.makeText(MainActivity.this, "변경 완료!", Toast.LENGTH_LONG).show();
                         }
                     }
                 });
 
     }
 
-    public String returnUsername() {return username;}
+    public String returnUsername() {
+        return username;}
 
     public void changingUsercode(String data) {
+        user = FirebaseAuth.getInstance().getCurrentUser();
         user.updateEmail(data+"@inha.ac.kr")
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
-                            Toast.makeText(MainActivity.this, "학번 변경 완료!", Toast.LENGTH_LONG).show();
+                            Toast.makeText(MainActivity.this, "변경 완료!", Toast.LENGTH_LONG).show();
                         }
                     }
                 });
     }
 
     public void changePassword(String data) {
+        user = FirebaseAuth.getInstance().getCurrentUser();
         user.updatePassword(data)
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
-                            Toast.makeText(MainActivity.this, "비밀번호 변경 완료!", Toast.LENGTH_LONG).show();
+                            Toast.makeText(MainActivity.this, "변경 완료!", Toast.LENGTH_LONG).show();
                         }
                     }
                 });
@@ -119,7 +135,9 @@ public class MainActivity extends AppCompatActivity {
     public void changingClasscode(String data) { classcode = data; }
     public void changingchatState(String data) { chatstate = data; }
 
-    public String returnUsercode() {return usercode;}
+    public String returnUsercode() {
+        user = FirebaseAuth.getInstance().getCurrentUser();
+        return usercode;}
     public String returnClasscode() {return classcode;}
     public String returnchatState() {return chatstate;}
 
@@ -148,7 +166,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void click03(View v){
-        Intent intent1 = new Intent(getApplicationContext(), goalcheck.class);
+        Intent intent1 = new Intent(getApplicationContext(), jkgoalcheck.class);
         startActivity(intent1);
         // 연결된 함수
     }
@@ -165,6 +183,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void click06(View v){
         Intent intent1 = new Intent(getApplicationContext(), focusmode.class);
+        startActivity(intent1);
+    }
+
+    public void profile(View v){
+        Intent intent1 = new Intent(getApplicationContext(), jkgoalcheck0.class);
         startActivity(intent1);
     }
 
