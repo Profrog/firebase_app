@@ -37,38 +37,51 @@
 
 
     <EditText
-        android:id="@+id/setting_time"
+        android:id="@+id/edit_text_input"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/nanumsquareround"
-        android:text="집중 시간 선택" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tv"
-        />
-
-
-
-    <TimePicker
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tp"
-        android:layout_gravity="center_horizontal"
-        android:timePickerMode="spinner"
-        />
-
-
-
-
-    <Button
-        android:id="@+id/btn_move"
-        android:layout_width="220dp"
-        android:layout_height="74dp"
+        android:layout_above="@+id/text_view_countdown"
+        android:layout_centerHorizontal="true"
         android:layout_gravity="center"
         android:fontFamily="@font/nanumsquareround"
-        android:text="집중하러가기!"
-        android:textSize="26dp" />
+        android:hint="분을 입력하세요"
+        android:inputType="number"
+        android:maxLength="4" />
+
+    <Button
+        android:id="@+id/button_set"
+        android:layout_width="74dp"
+        android:layout_height="36dp"
+        android:layout_alignTop="@+id/edit_text_input"
+        android:layout_gravity="center"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="@font/nanumsquareround"
+        android:text="SET" />
+    <TextView
+        android:id="@+id/text_view_countdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="00:00"
+        android:textColor="@android:color/black"
+        android:fontFamily="@font/nanumsquareround"
+        android:layout_gravity="center"
+        android:textSize="60sp"
+        android:layout_marginBottom="20dp"
+        />
+
+    <Button
+        android:id="@+id/button_start_pause"
+        android:layout_width="276dp"
+        android:layout_height="91dp"
+        android:layout_below="@+id/text_view_countdown"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:fontFamily="@font/nanumsquareround"
+        android:text="집중하러 가기!"
+        android:textSize="40sp"
+        />
+
 
 </LinearLayout>
