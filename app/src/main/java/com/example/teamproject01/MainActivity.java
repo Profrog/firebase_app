@@ -147,12 +147,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void click02(View v){
-        Intent intent1 = new Intent(getApplicationContext(), purchasingJava.class);
+        Intent intent1 = new Intent(getApplicationContext(), goalList.class);
         startActivity(intent1);
     }
 
     public void click03(View v){
-        Intent intent1 = new Intent(getApplicationContext(), goalcheck.class);
+        Intent intent1 = new Intent(getApplicationContext(), jkgoalcheck.class);
         startActivity(intent1);
         // 연결된 함수
     }
@@ -171,6 +171,14 @@ public class MainActivity extends AppCompatActivity {
         Intent intent1 = new Intent(getApplicationContext(), focusmode.class);
         startActivity(intent1);
     }
+
+    public void profile(View v){
+        Intent intent1 = new Intent(getApplicationContext(), goalcheck.class);
+        startActivity(intent1);
+    }
+
+
+
 
     public void logoutt(View v){
         new AlertDialog.Builder(this)

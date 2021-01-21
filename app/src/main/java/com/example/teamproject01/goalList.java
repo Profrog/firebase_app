@@ -52,8 +52,8 @@ public class goalList extends AppCompatActivity {
         String classcode1 = ((MainActivity) MainActivity.forstatic).returnClasscode();
 
 
-        ((MainData2) MainData2.forstatic2).changingpurpose(0);
-        pur_count = ((MainData2) MainData2.forstatic2).returnpurpose();
+        //((MainData2) MainData2.forstatic2).changingpurpose(0);
+        //pur_count = ((MainData2) MainData2.forstatic2).returnpurpose();
         test_purpose = new ArrayList<>(101);
 
         //final TextView purpose_content = (TextView)findViewById(R.id.purpose_contents);
@@ -73,7 +73,7 @@ public class goalList extends AppCompatActivity {
                 if(pur_count < 100) {
                     test_purpose.add(newPost.toString());
                     pur_count++;
-                    ((MainData2) MainData2.forstatic2).changingpurpose(pur_count);
+                   // ((MainData2) MainData2.forstatic2).changingpurpose(pur_count);
                 }
             }
 
@@ -92,8 +92,6 @@ public class goalList extends AppCompatActivity {
             @Override
             public void onCancelled(DatabaseError databaseError) {}
         });
-
-
 
     }
 

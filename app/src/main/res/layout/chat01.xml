@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/paster01">
 
 
     <TextView
@@ -14,6 +15,8 @@
         android:layout_weight="1"
         android:text="채팅 창"
         android:textSize="30dp"
+        android:background="#"
+        android:textColor="#e84a5f"
         />
 
         <ScrollView
@@ -30,6 +33,8 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:text = ""
+        android:background="#ffffff"
+        android:textColor="#e84a5f"
         />
 
         </ScrollView>
@@ -42,6 +47,8 @@
         android:inputType="textPersonName"
         android:textSize="15dp"
         android:hint="채팅 칠 내용"
+        android:textColor="#00AFEC"
+        android:background="#"
 
         />
 
@@ -54,6 +61,8 @@
             android:layout_weight="1.5"
             android:text="채팅 올리기"
             android:onClick="clicksaving1"
+            android:textColor="#00AFEC"
+            android:background="#ffffff"
             />
 
 </LinearLayout>
