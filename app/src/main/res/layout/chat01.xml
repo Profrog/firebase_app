@@ -15,7 +15,7 @@
         android:layout_weight="1"
         android:text="채팅 창"
         android:textSize="30dp"
-        android:background="#"
+        android:background="#00ff0000"
         android:textColor="#e84a5f"
         />
 
@@ -48,7 +48,7 @@
         android:textSize="15dp"
         android:hint="채팅 칠 내용"
         android:textColor="#919191"
-        android:background="#"
+        android:background="#00ff0000"
 
         />
 

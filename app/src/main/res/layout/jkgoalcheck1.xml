@@ -113,7 +113,7 @@
         tools:layout_editor_absoluteX="32dp"
         tools:layout_editor_absoluteY="598dp"
         android:textColor="#919191"
-        android:background="#"/>
+        android:background="#00ff0000"/>
 
 
     </LinearLayout>
@@ -132,7 +132,7 @@
             tools:layout_editor_absoluteX="32dp"
             tools:layout_editor_absoluteY="598dp"
             android:textColor="#919191"
-            android:background="#"/>
+            android:background="#00ff0000"/>
 
     </LinearLayout>
 
@@ -151,7 +151,7 @@
             tools:layout_editor_absoluteX="32dp"
             tools:layout_editor_absoluteY="598dp"
             android:textColor="#919191"
-            android:background="#"/>
+            android:background="#00ff0000"/>
 
     </LinearLayout>
     <LinearLayout
@@ -169,7 +169,7 @@
             tools:layout_editor_absoluteX="32dp"
             tools:layout_editor_absoluteY="598dp"
             android:textColor="#919191"
-            android:background="#"/>
+            android:background="@color/zxing_transparent"/>
 
         <CheckBox
             android:id="@+id/checkBox4"

@@ -15,7 +15,7 @@
         android:layout_weight="1"
         android:text="목표달성 창"
         android:textSize="30dp"
-        android:background="#"
+        android:background="#00ff0000"
         android:textColor="#e84a5f"
         />
 
@@ -44,7 +44,7 @@
         android:textSize="15dp"
         android:text="목표 칠 내용"
         android:textColor="#919191"
-        android:background="#"
+        android:background="#00ff0000"
 
         />
 
