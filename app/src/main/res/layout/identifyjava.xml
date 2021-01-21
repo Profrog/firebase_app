@@ -40,7 +40,7 @@
             android:text="이름"
             android:textColor="#919191"
             android:background="@color/zxing_transparent"
-            
+
             />
 
 
@@ -121,7 +121,7 @@
 
 
         <TextView
-            android:id = "@+id/login_contents"
+            android:id = "@+id/login_contents2"
             android:textSize="25dp"
             android:layout_marginTop="20dp"
             android:layout_below= "@+id/gochatfield"
@@ -134,7 +134,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/main"
-            android:layout_below="@id/login_contents"
+            android:layout_below="@id/login_contents2"
             />
 
 

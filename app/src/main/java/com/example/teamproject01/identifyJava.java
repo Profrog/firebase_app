@@ -34,7 +34,7 @@ public class identifyJava extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.identifyjava);
 
-        final TextView login_content = (TextView)findViewById(R.id.login_contents);
+      //  final TextView login_content = (TextView)findViewById(R.id.login_contents);
 
         username1 = (EditText) findViewById(R.id.username);
         usercode1 = (EditText) findViewById(R.id.usercode);
@@ -44,13 +44,13 @@ public class identifyJava extends AppCompatActivity {
         usercode1.setText(((MainActivity)MainActivity.forstatic).returnUsercode());
 
         String showdata = "이름 " + ((MainActivity)MainActivity.forstatic).returnUsername() + "\n" + "학번 " + ((MainActivity)MainActivity.forstatic).returnUsercode() + "\n" +  "학수번호 ";
-        login_content.setText(showdata);
+       // login_content.setText(showdata);
 
     }
 
     public void clicksaving(View v){
 
-        final TextView login_content = (TextView)findViewById(R.id.login_contents);
+        //final TextView login_content = (TextView)findViewById(R.id.login_contents);
 
         FirebaseDatabase DB1 = FirebaseDatabase.getInstance();
         DatabaseReference myRef = DB1.getReference("check").child(classcode1.getText().toString()).child(usercode1.getText().toString());
@@ -58,14 +58,14 @@ public class identifyJava extends AppCompatActivity {
         myRef.setValue(username1.getText().toString());
 
         String showdata = "이름 " + username1.getText().toString() + "\n" + "학번 " + usercode1.getText().toString() + "\n" +  "학수번호 " + classcode1.getText().toString();
-        login_content.setText(showdata);
+       // login_content.setText(showdata);
 
     }
 
 
     public void clickcancel(View v) {
 
-        final TextView login_content = (TextView)findViewById(R.id.login_contents);
+        //final TextView login_content = (TextView)findViewById(R.id.login_contents);
 
         username1.setText("이름");
         usercode1.setText("학번");
@@ -82,7 +82,7 @@ public class identifyJava extends AppCompatActivity {
         ((MainActivity)MainActivity.forstatic).changingClasscode("");
 
         String showdata = "이름 " + username1.getText().toString() + "\n" + "학번 " + usercode1.getText().toString() + "\n" +  "학수번호 " + classcode1.getText().toString();
-        login_content.setText(showdata);
+        //login_content.setText(showdata);
 
     }
 
