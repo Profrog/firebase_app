@@ -7,7 +7,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/pastel2">
 
     <TextView
         android:id="@+id/textView4"
@@ -120,7 +121,9 @@
                     android:textSize="25dp"
                     android:inputType="textMultiLine"
                     tools:layout_editor_absoluteX="32dp"
-                    tools:layout_editor_absoluteY="598dp" />
+                    tools:layout_editor_absoluteY="598dp"
+                    android:textColor="#919191"
+                    android:background="#"/>
 
             </LinearLayout>
 
@@ -137,7 +140,9 @@
                     android:inputType="textMultiLine"
                     android:textSize="25dp"
                     tools:layout_editor_absoluteX="32dp"
-                    tools:layout_editor_absoluteY="598dp" />
+                    tools:layout_editor_absoluteY="598dp"
+                    android:textColor="#919191"
+                    android:background="#"/>
 
             </LinearLayout>
 
@@ -154,7 +159,9 @@
                     android:inputType="textMultiLine"
                     android:textSize="25dp"
                     tools:layout_editor_absoluteX="286dp"
-                    tools:layout_editor_absoluteY="611dp" />
+                    tools:layout_editor_absoluteY="611dp"
+                    android:textColor="#919191"
+                    android:background="#"/>
 
             </LinearLayout>
 
@@ -174,7 +181,11 @@
                 android:textSize="25dp"
                 tools:layout_editor_absoluteX="286dp"
                 tools:layout_editor_absoluteY="611dp"
+                android:textColor="#919191"
+                android:background="#"
+
                 />
+
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -247,7 +258,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="changegoal"
-        android:text="확 인" />
+        android:text="확 인"
+        android:textColor="#00AFEC"
+        android:background="#ffffff"/>
 
 
 </LinearLayout>

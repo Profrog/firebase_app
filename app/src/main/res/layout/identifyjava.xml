@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/paster01">
 
 
     <TextView
@@ -17,6 +18,8 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.022"
+        android:background="#"
+        android:textColor="#e84a5f"
         />
 
 
@@ -35,6 +38,9 @@
             android:inputType="textPersonName"
             android:textSize="15dp"
             android:text="이름"
+            android:textColor="#919191"
+            android:background="#"
+            android:layout_margintop="10dp"
             />
 
 
@@ -48,6 +54,9 @@
             android:inputType="textPersonName"
             android:textSize="15dp"
             android:text="학번"
+            android:textColor="#919191"
+            android:background="#"
+            android:layout_margintop="10dp"
             />
 
         <EditText
@@ -59,7 +68,10 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:textSize="15dp"
-            android:hint="학수번호" />
+            android:hint="학수번호"
+            android:textColor="#919191"
+            android:background="#"
+            android:layout_margintop="10dp"/>
 
         <Button
             android:id="@+id/okbutton1"
@@ -67,7 +79,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="등록"
-            android:onClick="clicksaving" />
+            android:onClick="clicksaving"
+            android:textColor="#00AFEC"
+            android:background="#ffffff"
+            android:layout_margintop="10dp"/>
 
         <Button
             android:id="@+id/cancelbutton1"
@@ -76,9 +91,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:onClick="clickcancel"
-            android:text="제거" />
-
-
+            android:text="제거"
+            android:textColor="#00AFEC"
+            android:background="#ffffff"/>
 
 
 
@@ -89,7 +104,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:onClick="clickAlarm"
-            android:text="공지 이동" />
+            android:text="공지 이동"
+            android:textColor="#00AFEC"
+            android:background="#ffffff"/>
 
         <Button
             android:id="@+id/gochatfield"
@@ -98,7 +115,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:onClick="clickchat"
-            android:text="목표방 이동" />
+            android:text="목표방 이동"
+            android:textColor="#00AFEC"
+            android:background="#ffffff"/>
 
 
         <TextView
@@ -110,6 +129,14 @@
             android:layout_height="wrap_content"
             android:text = ""
             />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/Mainactivity_alpa"
+            android:layout_below="@id/login_contents"
+            />
+
 
 
 

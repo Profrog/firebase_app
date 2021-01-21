@@ -47,7 +47,7 @@
         android:inputType="textPersonName"
         android:textSize="15dp"
         android:hint="채팅 칠 내용"
-        android:textColor="#00AFEC"
+        android:textColor="#919191"
         android:background="#"
 
         />

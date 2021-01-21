@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/paster01">
 
 
     <TextView
@@ -14,6 +15,8 @@
         android:layout_weight="1"
         android:text="목표달성 창"
         android:textSize="30dp"
+        android:background="#"
+        android:textColor="#e84a5f"
         />
 
     <ScrollView
@@ -22,7 +25,9 @@
         android:layout_height="0dp"
         android:layout_weight="6"
         android:scrollbars="vertical"
-        android:fillViewport="true">
+        android:fillViewport="true"
+        android:background="#ffffff"
+        android:textColor="#e84a5f">
 
     </ScrollView>
 
@@ -38,6 +43,8 @@
         android:inputType="textPersonName"
         android:textSize="15dp"
         android:text="목표 칠 내용"
+        android:textColor="#919191"
+        android:background="#"
 
         />
 
@@ -49,7 +56,9 @@
         android:layout_below="@+id/enroll_purpose"
         android:layout_weight="0.5"
         android:onClick="clicksav_purpose1"
-        android:text="목표 올리기" />
+        android:text="목표 올리기"
+        android:textColor="#00AFEC"
+        android:background="#ffffff"/>
 
     <Button
         android:id="@+id/updatebutton2"
@@ -58,7 +67,9 @@
         android:layout_below="@+id/targetbutton1"
         android:layout_weight="0.5"
         android:onClick="clicksav_update1"
-        android:text="목표 업데이트" />
+        android:text="목표 업데이트"
+        android:textColor="#00AFEC"
+        android:background="#ffffff"/>
 
 
 </LinearLayout>

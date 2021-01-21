@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
+    android:background="@drawable/paster01"
     android:orientation="vertical"
     tools:context=".signup">
     ​    ​
@@ -14,8 +14,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="회원가입"
-        android:textColor="@android:color/black"
-        android:textSize="25sp" />
+        android:textSize="25sp"
+        android:background="#"
+        android:textColor="#e84a5f"/>
     ​
     <View
         android:id="@+id/view_line"
@@ -35,7 +36,7 @@
             android:ems="10"
             android:hint="학 번 (ex.12210000)"
             android:inputType="textPersonName"
-            android:textColor="@android:color/black" />
+            android:textColor="#919191" />
 
 
     ​
@@ -47,7 +48,7 @@
         android:ems="10"
         android:hint="이 름"
         android:inputType="textPersonName"
-        android:textColor="@android:color/black" />
+        android:textColor="#919191" />
     ​
     ​
     <EditText
@@ -58,7 +59,7 @@
         android:ems="10"
         android:hint="비 밀 번 호 (6글자 이상)"
         android:inputType="textPassword"
-        android:textColor="@android:color/black" />
+        android:textColor="#919191" />
     ​
 
     <Button
@@ -66,9 +67,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="@android:color/white"
         android:text="회원 가입"
-        android:textColor="@android:color/black" />
+        android:textColor="#00AFEC"
+        android:background="#ffffff" />
     ​
 </LinearLayout>
 

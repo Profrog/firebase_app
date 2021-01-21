@@ -2,11 +2,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="#ffffff"
+    android:background="@drawable/paster01"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Login">
+    tools:context=".Login"
+   >
     ​
     <ImageView
         android:id="@+id/imageView"
@@ -26,7 +27,9 @@
         android:layout_marginStart="8dp"
         android:ems="10"
         android:hint="학 번"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:textColor="#919191"
+        android:background="#"/>
     ​
     <EditText
         android:id="@+id/logintext_password"
@@ -38,13 +41,16 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="비 밀 번 호"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:textColor="#919191"
+        android:background="#"/>
     ​
     <Button
         android:id="@+id/btn_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:textColor="#00AFEC"
         android:background="#ffffff"
         android:text="로그인" />
     ​
@@ -54,6 +60,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:textColor="#00AFEC"
         android:background="#ffffff"
         android:text="회원가입" />
     ​

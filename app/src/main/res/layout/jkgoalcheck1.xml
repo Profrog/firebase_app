@@ -7,7 +7,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/pastel2">
 
     <TextView
         android:id="@+id/textView4"
@@ -59,8 +60,6 @@
 
 
 
-
-
         <EditText
         android:id="@+id/password"
         android:layout_width="wrap_content"
@@ -75,7 +74,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="changeprofile"
-            android:text="수 정" />
+            android:text="수 정"
+            android:textColor="#00AFEC"
+            android:background="#ffffff"/>
 
 
     </LinearLayout>
@@ -101,6 +102,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginTop="20dp">
+
     <EditText
         android:id="@+id/text1"
         android:layout_width="match_parent"
@@ -109,7 +111,9 @@
         android:gravity="start|top"
         android:inputType="textMultiLine"
         tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="598dp" />
+        tools:layout_editor_absoluteY="598dp"
+        android:textColor="#919191"
+        android:background="#"/>
 
 
     </LinearLayout>
@@ -126,7 +130,9 @@
             android:gravity="start|top"
             android:inputType="textMultiLine"
             tools:layout_editor_absoluteX="32dp"
-            tools:layout_editor_absoluteY="598dp" />
+            tools:layout_editor_absoluteY="598dp"
+            android:textColor="#919191"
+            android:background="#"/>
 
     </LinearLayout>
 
@@ -143,7 +149,9 @@
             android:gravity="start|top"
             android:inputType="textMultiLine"
             tools:layout_editor_absoluteX="32dp"
-            tools:layout_editor_absoluteY="598dp" />
+            tools:layout_editor_absoluteY="598dp"
+            android:textColor="#919191"
+            android:background="#"/>
 
     </LinearLayout>
     <LinearLayout
@@ -159,7 +167,9 @@
             android:gravity="start|top"
             android:inputType="textMultiLine"
             tools:layout_editor_absoluteX="32dp"
-            tools:layout_editor_absoluteY="598dp" />
+            tools:layout_editor_absoluteY="598dp"
+            android:textColor="#919191"
+            android:background="#"/>
 
         <CheckBox
             android:id="@+id/checkBox4"
@@ -179,7 +189,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="changegoal"
-        android:text="Button" />
+        android:text="누르기"
+        android:textColor="#00AFEC"
+        android:background="#ffffff"/>
 
 
 </LinearLayout>

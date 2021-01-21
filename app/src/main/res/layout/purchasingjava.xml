@@ -45,6 +45,8 @@
             android:layout_height="wrap_content"
             android:text="결제"
             android:onClick="clicksaving1"
+            android:textColor="#00AFEC"
+            android:background="#ffffff"
             />
 
 
