@@ -24,15 +24,9 @@
         android:scrollbars="vertical"
         android:fillViewport="true">
 
-
-        <TextView
-            android:id = "@+id/purpose_contents"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:text = ""
-            />
-
     </ScrollView>
+
+
 
 
 
@@ -40,7 +34,7 @@
         android:id="@+id/enroll_purpose"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1.5"
+        android:layout_weight="1"
         android:inputType="textPersonName"
         android:textSize="15dp"
         android:text="목표 칠 내용"
@@ -57,9 +51,14 @@
         android:onClick="clicksav_purpose1"
         android:text="목표 올리기" />
 
-
-
-
+    <Button
+        android:id="@+id/updatebutton2"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_below="@+id/targetbutton1"
+        android:layout_weight="0.5"
+        android:onClick="clicksav_update1"
+        android:text="목표 업데이트" />
 
 
 </LinearLayout>

@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">마음만은샌애기</string>
+
+
+    <string name="username">username</string>
+    <string name="usercode">usercode</string>
+    <string name="classcode">classcode</string>
+    <string name="chatstate"></string>
+
+
+    <string-array name = "purpose_name">
+
+
+    </string-array>
+
+
 </resources>

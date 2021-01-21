@@ -27,14 +27,12 @@ public class MainActivity extends AppCompatActivity {
 
     private FirebaseUser user;
     private FirebaseAuth firebaseAuth;
-    private String username ="";
-    private String usercode = "";
-    private String classcode = "";
-    private String chatstate = "";
+
 
     private String enroll_date;
     private String returnString;
-
+    private String username ="";
+    private String usercode = "";
     private long backBtnTime = 0;
 
     public static Context forstatic;
@@ -46,6 +44,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         forstatic = this;
 
+        Intent intent1 = new Intent(getApplicationContext(), MainData2.class);
+        startActivity(intent1);
+
+
         user = FirebaseAuth.getInstance().getCurrentUser();
 
         if(user==null) {
@@ -55,6 +57,10 @@ public class MainActivity extends AppCompatActivity {
 
         username = user.getDisplayName();
         usercode = user.getEmail().substring(0,8);
+
+        ((MainData2)MainData2.forstatic2).changingUsername(user.getDisplayName());
+        ((MainData2)MainData2.forstatic2).changingUsercode(user.getEmail().substring(0,8));
+
     }
 
     @Override
@@ -90,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public String returnUsername() {return username;}
+
 
     public void changingUsercode(String data) {
         user.updateEmail(data+"@inha.ac.kr")
@@ -116,12 +122,13 @@ public class MainActivity extends AppCompatActivity {
                 });
     }
 
-    public void changingClasscode(String data) { classcode = data; }
-    public void changingchatState(String data) { chatstate = data; }
+    public void changingClasscode(String data) {  ((MainData2)MainData2.forstatic2).changingClasscode(data);}
+    public void changingchatState(String data) { ((MainData2)MainData2.forstatic2).changingchatState(data); }
 
-    public String returnUsercode() {return usercode;}
-    public String returnClasscode() {return classcode;}
-    public String returnchatState() {return chatstate;}
+    public String returnUsername() {return  ((MainData2)MainData2.forstatic2).returnUsername();}
+    public String returnUsercode() {return  ((MainData2)MainData2.forstatic2).returnUsername();}
+    public String returnClasscode() {return  ((MainData2)MainData2.forstatic2).returnClasscode();}
+    public String returnchatState() {return  ((MainData2)MainData2.forstatic2).returnchatState();}
 
 
 

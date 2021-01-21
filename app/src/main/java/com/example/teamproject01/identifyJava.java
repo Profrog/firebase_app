@@ -34,12 +34,18 @@ public class identifyJava extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.identifyjava);
 
-        username1 = (TextView) findViewById(R.id.username);
-        usercode1 = (TextView) findViewById(R.id.usercode);
+        final TextView login_content = (TextView)findViewById(R.id.login_contents);
+
+        username1 = (EditText) findViewById(R.id.username);
+        usercode1 = (EditText) findViewById(R.id.usercode);
         classcode1 = (EditText) findViewById(R.id.classcode);
 
         username1.setText(((MainActivity)MainActivity.forstatic).returnUsername());
         usercode1.setText(((MainActivity)MainActivity.forstatic).returnUsercode());
+
+        String showdata = "이름 " + ((MainActivity)MainActivity.forstatic).returnUsername() + "\n" + "학번 " + ((MainActivity)MainActivity.forstatic).returnUsercode() + "\n" +  "학수번호 ";
+        login_content.setText(showdata);
+
     }
 
     public void clicksaving(View v){
