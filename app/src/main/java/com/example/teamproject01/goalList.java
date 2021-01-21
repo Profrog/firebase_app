@@ -113,7 +113,7 @@ public class goalList extends AppCompatActivity {
         DatabaseReference myRef = DB1.getReference("check").child(classcode1).child("purpose").child(currentTime.toString()); //여기 고쳐야 합니다
         myRef.setValue(enroll_purpose.getText().toString());
 
-        enroll_purpose.setText(Integer.toString(test_purpose.size()));
+        enroll_purpose.setText("");
 
         //Map<String, Object> childUpdates = new HashMap<>();
         //childUpdates.put(usercode1,enroll_purpose.getText().toString());
