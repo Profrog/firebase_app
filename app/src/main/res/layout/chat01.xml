@@ -41,7 +41,7 @@
         android:layout_weight="1.5"
         android:inputType="textPersonName"
         android:textSize="15dp"
-        android:text="채팅 칠 내용"
+        android:hint="채팅 칠 내용"
 
         />
 
