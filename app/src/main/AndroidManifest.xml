@@ -42,8 +42,7 @@
             android:launchMode="singleTask">
             ></activity>
         <activity android:name= ".goalList"></activity>
-        <activity android:name=".focusmode"></activity>
-        <activity android:name=".focusmode2"></activity>
+        <activity android:name=".focusmode" android:launchMode="singleTask"></activity>
         <activity android:name=".MainData2"></activity>
 
     </application>
