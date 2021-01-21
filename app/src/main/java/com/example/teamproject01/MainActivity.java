@@ -27,10 +27,10 @@ public class MainActivity extends AppCompatActivity {
 
     private FirebaseUser user;
     private FirebaseAuth firebaseAuth;
-    private String username ="";
-    private String usercode = "";
-    private String classcode = "";
-    private String chatstate = "";
+    private String username ="이름";
+    private String usercode = "12161538";
+    private String classcode = "학수번호";
+    private String chatstate = "chat";
 
     private String enroll_date;
     private String returnString;
@@ -46,12 +46,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         forstatic = this;
 
+        Intent intent1 = new Intent(getApplicationContext(), MainData2.class);
+        startActivity(intent1);
+
         user = FirebaseAuth.getInstance().getCurrentUser();
 
         if(user==null) {
             Intent intent = new Intent(this, firstWindow.class);
             startActivity(intent);
         }
+
 
         username = user.getDisplayName();
         usercode = user.getEmail().substring(0,8);

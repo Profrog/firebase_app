@@ -18,7 +18,7 @@ public class goalcheck extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.goalcheck1);
+        setContentView(R.layout.goalcheck);
 
         final TextView username=(TextView)findViewById(R.id.name);
         String username1 = ((MainActivity) MainActivity.forstatic).returnUsername();
@@ -28,10 +28,10 @@ public class goalcheck extends AppCompatActivity {
         String usercode1 = ((MainActivity) MainActivity.forstatic).returnUsercode();
         usercode.setText(usercode1);
 
+
         final TextView userclass=(TextView)findViewById(R.id.classcode);
         String class1 = ((MainActivity) MainActivity.forstatic).returnClasscode();
         userclass.setText(class1);
-
 
     }
 }
